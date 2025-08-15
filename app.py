@@ -43,7 +43,7 @@ else:
 col1, col2, col3, col4 = st.columns(4)
 col1.metric("Salário Médio (USD)", f"${salario_medio:,.2f}")
 col2.metric("Salário Máximo (USD)", f"${salario_maximo:,.2f}")
-col3.metric("Total de Registros", f"${total_registros:,.2f}")      
+col3.metric("Total de Registros", f"{total_registros:}")      
 col4.metric("Cargo Mais Frequente", cargo_mais_frequente)
 
 st.markdown("---")
@@ -111,4 +111,3 @@ with col_graf4:
         st.warning("Nenhum dado disponível para os filtros selecionados.")
     
 st.subheader("Tabela de Dados Detalhados")
-st.dataframe(df_filtrado)
